@@ -1,0 +1,29 @@
+{
+  "name": "vasya/pg-drag",
+  "description": "Ballistic Drag Functions PHP Library",
+  "type": "library",
+  "keywords": [
+    "ballistics",
+    "drag",
+    "pg-drag",
+    "php"
+  ],
+  "require": {
+    "vasya/pg-atmospherics": "dev-master",
+    "vasya/pg-conversions": "dev-master",
+    "php": ">=7.3."
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "seniorfulldev",
+      "email": "piaoyilong114@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {
+      "drag": "src/"
+    }
+  }
+}
