@@ -1,10 +1,9 @@
 <?php
 
-namespace drag;
+namespace Drag;
 
 use atmospherics\Atmospherics;
 use conversions\Conversions;
-
 class Drag
 {
 
@@ -90,6 +89,9 @@ class Drag
         // Returns the Time value from the Ingals table at the given Velocity.
         $counter = 0;
         while ($this->ingals['v'][$counter] > $currentVelocity) {
+            if ($counter === count($this->ingals['v'])-1){
+                break;
+            }
             $counter++;
         }
         if ($this->ingals['v'][$counter] === $currentVelocity) {
@@ -111,6 +113,9 @@ class Drag
         $counter = 0;
         while ($this->ingals['s'][$counter] < $currentSpace) {
             $counter++;
+            if ($counter === count($this->ingals['s'])-1){
+                break;
+            }
         }
         if ($this->ingals['s'][$counter] === $currentSpace) {
             $velocityFromSpace = $this->ingals['v'][$counter];
