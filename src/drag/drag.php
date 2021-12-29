@@ -2,8 +2,8 @@
 
 namespace drag;
 
-use atmospherics\Atmospherics;
-use conversions\Conversions;
+use Atmospherics\Atmospherics;
+use Conversions\Conversions;
 
 class Drag
 {
