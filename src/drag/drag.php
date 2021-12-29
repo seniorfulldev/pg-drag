@@ -17,7 +17,6 @@ class Drag
     public function __construct()
     {
         $string = file_get_contents(__DIR__ . "/ingals.data.json");
-
         $this->gravity = 32.176; // Feet Per Second Per Second
         $this->conversions = new Conversions();
         $this->atmospherics = new Atmospherics();
