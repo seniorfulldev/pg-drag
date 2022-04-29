@@ -244,6 +244,9 @@ class Drag
 
     public function velocityFromRange($ballisticCoefficient, $muzzleVelocityFPS, $currentRangeYards){
         // Calculates the velocity (feet per second) remaining in the bullet at a given range (yards).
+        if (!$currentRangeYards) {
+            return $muzzleVelocityFPS;
+        }
 		$currentSpace = $this->ingalsSpaceFromVelocity($muzzleVelocityFPS) + (($currentRangeYards * 3) / $ballisticCoefficient);
 		return $this->ingalsVelocityFromSpace($currentSpace);
 	}
